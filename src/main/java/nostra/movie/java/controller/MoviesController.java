@@ -1,6 +1,8 @@
 package nostra.movie.java.controller;
 
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import nostra.movie.java.entity.Movies;
 import nostra.movie.java.service.MoviesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,10 @@ import java.util.List;
 public class MoviesController {
     @Autowired
     private MoviesService moviesService;
+
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "SUCCESS", response = Movies.class)
+    })
 
     @GetMapping("/movies")
     @ApiOperation(value="Show all data movie in page viewMovies")

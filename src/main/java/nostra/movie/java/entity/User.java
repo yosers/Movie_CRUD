@@ -1,5 +1,6 @@
 package nostra.movie.java.entity;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "USERS")
+@ApiModel(description = "All entity of User")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

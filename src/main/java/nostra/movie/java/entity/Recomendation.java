@@ -1,5 +1,6 @@
 package nostra.movie.java.entity;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "RECOMENDATION")
+@ApiModel(description = "All entity of Recomendation")
 public class Recomendation {
     @Id
     @GeneratedValue

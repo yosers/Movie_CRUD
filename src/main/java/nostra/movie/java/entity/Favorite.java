@@ -1,19 +1,19 @@
 package nostra.movie.java.entity;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "FAVORITE")
+@ApiModel(description = "All entity of Favorite")
 public class Favorite {
     @Id
     @GeneratedValue
@@ -33,7 +33,7 @@ public class Favorite {
 //    @ManyToOne(cascade = { CascadeType.PERSIST })
 //    @JoinTable(name = "idFavoriteUser")
 //    private User user;
-//
+
 //    @ManyToOne(cascade = CascadeType.PERSIST)
 //    @JoinTable(name = "idFavoriteMovie")
 //    private Movies movies;
